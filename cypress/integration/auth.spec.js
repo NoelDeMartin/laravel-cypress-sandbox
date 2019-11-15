@@ -1,7 +1,7 @@
 describe('Auth', () => {
 
     it('Logs in', () => {
-        cy.create('App\\User').then(user => {
+        cy.create('User').then(user => {
             cy.visit('/login');
 
             cy.get('input[name="email"]').type(user.email);
@@ -11,6 +11,14 @@ describe('Auth', () => {
             cy.url().should('contain', '/private')
             cy.contains(user.name).should('be.visible');
         });
+    });
+
+    it('Sees private section', () => {
+        cy.login();
+
+        cy.visit('/private');
+
+        cy.contains('You are logged in!').should('be.visible');
     });
 
 });
