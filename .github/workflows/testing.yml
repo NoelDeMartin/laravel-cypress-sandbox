@@ -1,0 +1,24 @@
+name: Testing
+
+on: [push]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.testing', '.env');"
+    - name: Install Composer Dependencies
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+    - name: Install Node Dependencies
+      run: npm install
+    - name: Generate key
+      run: php artisan key:generate
+    - name: Run Laravel Server
+      run: php artisan serve > /dev/null 2>&1 &
+    - name: Execute tests
+      run: npm run cy:run
