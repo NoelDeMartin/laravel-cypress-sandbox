@@ -1,7 +1,7 @@
 describe('Authentication', () => {
 
     it('Logs in users', () => {
-        cy.createModel('User').then(user => {
+        cy.create('User').then(user => {
             cy.visit('/login');
 
             cy.get('input[name="email"]').type(user.email);
