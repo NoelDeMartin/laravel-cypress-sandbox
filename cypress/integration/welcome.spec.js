@@ -1,9 +1,9 @@
 describe('Welcome', () => {
 
-    it('Sees "Laravel"', () => {
+    it('Shows "Laravel"', () => {
         cy.visit('/');
 
-        cy.contains('Laravel').should('be.visible');
+        cy.contains('Laravel');
     });
 
 });

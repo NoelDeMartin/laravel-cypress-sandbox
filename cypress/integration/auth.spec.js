@@ -1,24 +1,24 @@
-describe('Auth', () => {
+describe('Authentication', () => {
 
-    it('Logs in', () => {
-        cy.create('User').then(user => {
+    it('Logs in users', () => {
+        cy.createModel('User').then(user => {
             cy.visit('/login');
 
             cy.get('input[name="email"]').type(user.email);
             cy.get('input[name="password"]').type('password');
             cy.get('button[type="submit"]').click();
 
-            cy.url().should('contain', '/private')
-            cy.contains(user.name).should('be.visible');
+            cy.url().should('contain', '/private');
+            cy.contains(user.name);
         });
     });
 
-    it('Sees private section', () => {
+    it('Shows private section to logged in users', () => {
         cy.login();
 
         cy.visit('/private');
 
-        cy.contains('You are logged in!').should('be.visible');
+        cy.contains('You are logged in!');
     });
 
 });
