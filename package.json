@@ -16,7 +16,7 @@
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
         "cypress": "^3.6.1",
-        "cypress-laravel": "0.0.2",
+        "cypress-laravel": "0.0.3",
         "jquery": "^3.2",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
