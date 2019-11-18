@@ -1,4 +1,4 @@
-# Laravel Cypress Sandbox [![Github Actions Status](https://github.com/noeldemartin/laravel-cypress-sandbox/workflows/Testing/badge.svg)](https://github.com/noeldemartin/laravel-cypress-sandboxs/actions)
+# Laravel Cypress Sandbox [![Github Actions Status](https://github.com/noeldemartin/laravel-cypress-sandbox/workflows/Testing/badge.svg)](https://github.com/noeldemartin/laravel-cypress-sandbox/actions)
 
 Sandbox project to test [cypress-laravel](https://github.com/NoelDeMartin/cypress-laravel) plugin for Cypress.
 
