@@ -19,7 +19,7 @@ jobs:
     - name: Install Composer Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Install Node Dependencies
-      run: npm install
+      run: npm ci
     - name: Generate key
       run: php artisan key:generate
     - name: Build assets
@@ -27,4 +27,4 @@ jobs:
     - name: Run Laravel Server
       run: php artisan serve > /dev/null 2>&1 &
     - name: Execute tests
-      uses: cypress-io/github-action@v1
+      run: npm run cy:run
