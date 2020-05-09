@@ -1,4 +1,8 @@
+import { useDatabaseMigrations } from 'cypress-laravel';
+
 describe('Authentication', () => {
+
+    useDatabaseMigrations();
 
     it('Logs in users', () => {
         cy.create('User').then(user => {

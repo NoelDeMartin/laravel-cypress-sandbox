@@ -1,1 +1,3 @@
-import 'cypress-laravel';
+import { useCypressLaravel } from 'cypress-laravel';
+
+useCypressLaravel();
