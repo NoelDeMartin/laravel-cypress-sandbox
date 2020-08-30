@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use NoelDeMartin\LaravelCypress\Facades\Cypress;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Cypress::command('findModel', function (string $modelClass, int $id) {
+            $modelClass = Cypress::resolveModelClass($modelClass);
+
+            return $modelClass::find($id);
+        });
     }
 }
