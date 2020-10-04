@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7070da8dc5c9f2020d10771965579872",
+    "content-hash": "b7d4e03d2240d733eb8505756a028f30",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5318,16 +5318,16 @@
         },
         {
             "name": "noeldemartin/laravel-cypress",
-            "version": "v0.2.2",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NoelDeMartin/laravel-cypress.git",
-                "reference": "02ef3ef2a406b4487fe673ac01093b8e71e4832c"
+                "reference": "05aefddd437d67647dc5b009c53bd9c573adc4c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NoelDeMartin/laravel-cypress/zipball/02ef3ef2a406b4487fe673ac01093b8e71e4832c",
-                "reference": "02ef3ef2a406b4487fe673ac01093b8e71e4832c",
+                "url": "https://api.github.com/repos/NoelDeMartin/laravel-cypress/zipball/05aefddd437d67647dc5b009c53bd9c573adc4c4",
+                "reference": "05aefddd437d67647dc5b009c53bd9c573adc4c4",
                 "shasum": ""
             },
             "require": {
@@ -5363,7 +5363,7 @@
                 "laravel",
                 "testing"
             ],
-            "time": "2020-10-03T06:13:44+00:00"
+            "time": "2020-10-04T11:07:12+00:00"
         },
         {
             "name": "nunomaduro/collision",
