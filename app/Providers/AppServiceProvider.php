@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Cypress::setModelsNamespace('\App\Models');
         Cypress::command('findModel', function (string $modelClass, int $id) {
             $modelClass = Cypress::resolveModelClass($modelClass);
 
