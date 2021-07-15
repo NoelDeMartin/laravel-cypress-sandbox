@@ -11,12 +11,16 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.3
     - name: Copy .env
       run: cp .env.testing .env
     - name: Create Database
       run: |
           sudo systemctl start mysql
           mysql --user="root" --password="root" -e "CREATE DATABASE cypress character set UTF8mb4 collate utf8mb4_bin;"
+          mysql --user="root" --password="root" -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'";
     - name: Install Composer Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Generate key
@@ -37,12 +41,16 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.3
     - name: Copy .env
       run: cp .env.testing .env
     - name: Create Database
       run: |
           sudo systemctl start mysql
           mysql --user="root" --password="root" -e "CREATE DATABASE cypress character set UTF8mb4 collate utf8mb4_bin;"
+          mysql --user="root" --password="root" -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'";
     - name: Install Composer Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
     - name: Generate key
