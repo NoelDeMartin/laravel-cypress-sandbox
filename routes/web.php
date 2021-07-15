@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('welcome');
 Route::view('/private', 'private')->middleware('auth');
