@@ -9,12 +9,12 @@
     "cy:test": "start-server-and-test dev http://localhost:3000 cy:run"
   },
   "dependencies": {
-    "cypress-laravel": "next",
     "vue": "^3.0.0-rc.1"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.0.0-rc.1",
-    "cypress": "^5.0.0",
+    "cypress": "^13.15.2",
+    "cypress-laravel": "0.2.1-next.2f81331177b4829956a54535ac43d84b8bb1f896",
     "start-server-and-test": "^1.11.3",
     "vite": "^1.0.0-rc.1"
   }

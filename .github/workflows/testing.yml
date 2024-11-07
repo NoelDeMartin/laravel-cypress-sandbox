@@ -7,13 +7,15 @@ jobs:
     name: Backend tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12
+    - uses: actions/checkout@v4
     - uses: shivammathur/setup-php@v2
       with:
-        php-version: 7.3
+        php-version: 8.2
+        extensions: json, dom, curl, libxml, mbstring
+        coverage: none
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
     - name: Copy .env
       run: cp .env.testing .env
     - name: Create Database
@@ -37,13 +39,15 @@ jobs:
     name: Frontend tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12
+    - uses: actions/checkout@v4
     - uses: shivammathur/setup-php@v2
       with:
-        php-version: 7.3
+        php-version: 8.2
+        extensions: json, dom, curl, libxml, mbstring
+        coverage: none
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
     - name: Copy .env
       run: cp .env.testing .env
     - name: Create Database
