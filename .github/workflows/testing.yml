@@ -33,6 +33,12 @@ jobs:
       run: npm ci
     - name: Execute tests
       run: npm run cy:run
+    - name: Upload Cypress screenshots
+      uses: actions/upload-artifact@v4
+      if: ${{ failure() }}
+      with:
+          name: cypress_screenshots
+          path: cypress/screenshots
   run-frontend-tests:
     name: Frontend tests
     runs-on: ubuntu-latest
@@ -65,3 +71,9 @@ jobs:
       run: cd frontend && npm ci
     - name: Execute tests
       run: cd frontend && npm run cy:test
+    - name: Upload Cypress screenshots
+      uses: actions/upload-artifact@v4
+      if: ${{ failure() }}
+      with:
+          name: cypress_screenshots
+          path: frontend/cypress/screenshots
