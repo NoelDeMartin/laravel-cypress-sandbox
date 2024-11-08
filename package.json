@@ -1,30 +1,11 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "cy:open": "cypress open",
+        "cy:open": "cypress open --e2e --browser chromium",
         "cy:run": "cypress run"
     },
     "devDependencies": {
-        "axios": "^0.19",
-        "bootstrap": "^4.0.0",
-        "cross-env": "^5.1",
         "cypress": "^13.15.2",
-        "cypress-laravel": "0.2.1-next.2f81331177b4829956a54535ac43d84b8bb1f896",
-        "jquery": "^3.2",
-        "laravel-mix": "^4.0.7",
-        "lodash": "^4.17.13",
-        "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1",
-        "sass": "^1.20.1",
-        "sass-loader": "7.*",
-        "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "cypress-laravel": "0.2.1-next.2f81331177b4829956a54535ac43d84b8bb1f896"
     }
 }

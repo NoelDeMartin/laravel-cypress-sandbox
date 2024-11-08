@@ -31,8 +31,6 @@ jobs:
       run: php artisan serve > /dev/null 2>&1 &
     - name: Install Node Dependencies
       run: npm ci
-    - name: Build assets
-      run: npm run production
     - name: Execute tests
       run: npm run cy:run
   run-frontend-tests:
